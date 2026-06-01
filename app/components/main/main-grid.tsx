@@ -1,3 +1,4 @@
+import { AddCard } from "../cards/add-card";
 import { PlantCard } from "../cards/plant-card";
 
 export function MainGrid() {
@@ -7,6 +8,7 @@ export function MainGrid() {
             <PlantCard />
             <PlantCard />
             <PlantCard />
+            <AddCard />
         </div>
     );
 }
