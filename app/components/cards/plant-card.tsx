@@ -1,14 +1,14 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 
-export function PlantCard() {
+export function PlantCard({ plant }: { plant: any }) {
     return(
         <Card>
             <CardHeader>
-                <CardTitle>Plant Name</CardTitle>
-                <CardDescription>Description of the plant</CardDescription>
+                <CardTitle>{plant.name}</CardTitle>
+                <CardDescription>{plant.short_descr}</CardDescription>
             </CardHeader>
             <CardContent>
-                <p>Additional information about the plant.</p>
+                <p>{plant.descr}</p>
             </CardContent>
         </Card>
     );
