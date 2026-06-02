@@ -2,9 +2,16 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { BadgePlus } from "lucide-react";
 
+import { addPlant } from "@/app/actions/add-plant";
 
-function onAddClicked(){
-    console.log("Add card clicked");
+
+async function onAddClicked() {
+  try {
+    const output = await addPlant();
+    console.log("Plant added successfully", output);
+  } catch (error) {
+    console.error(error);
+  }
 }
 
 
